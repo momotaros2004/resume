@@ -1,0 +1,294 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #4e73df, #1cc88a); /* Gradient from blue to green */
+    color: #333; /* Default text color */
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+/* Style for the "Jump to" links */
+a[href="#section-1"],
+a[href="#section-2"],
+a[href="#section-3"],
+a[href="#section-4"] {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #007bff; /* Blue border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #f0f8ff; /* Light blue background */
+    color: #007bff; /* Blue text */
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 5px 0; /* Add some space between the links */
+}
+
+/* Hover effects for all "Jump to" links */
+a[href="#section-1"]:hover,
+a[href="#section-2"]:hover,
+a[href="#section-3"]:hover,
+a[href="#section-4"]:hover {
+    background-color: #007bff; /* Darker blue background on hover */
+    color: white; /* Change text color to white on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Container setup */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.top {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.profile-img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 50%;
+}
+
+.gif-image1, .gif-image {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Section styles */
+hr {
+    border: 1px solid #ccc;
+}
+
+.skills, .contact-me {
+    text-align: center;
+}
+
+.footer-link {
+    margin: 0 10px;
+}
+
+.footer-link:hover {
+    color: #0077b5;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    background-color: #007bff; /* Blue color */
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .profile-img {
+        max-width: 150px;
+    }
+
+    .gif-image1, .gif-image {
+        max-width: 100%;
+    }
+
+    .skills .skill-row, .skills .skill-row1 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skills img {
+        max-width: 50%;
+    }
+
+    .contact-me h3 {
+        font-size: 16px;
+    }
+
+    .footer-link {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .btn {
+        width: 100%; /* Make buttons take full width on mobile */
+        padding: 12px 0; /* Adjust padding for larger clickable area */
+        font-size: 18px; /* Larger text on mobile for easier click */
+    }
+
+    /* Style for the "Jump to" links on mobile */
+    a[href="#section-1"],
+    a[href="#section-2"],
+    a[href="#section-3"],
+    a[href="#section-4"] {
+        width: 100%; /* Make the "Jump to" links full width on mobile */
+        padding: 12px 0; /* Adjust padding for easier clicking */
+        font-size: 18px; /* Larger text for mobile */
+    }
+}
+
+/* Tablets and Small Desktops */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+
+    .profile-img {
+        max-width: 180px;
+    }
+
+    .gif-image1, .gif-image {
+        max-width: 300px;
+    }
+
+    .skills {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .skills .skill-row, .skills .skill-row1 {
+        width: 45%;
+        text-align: center;
+    }
+
+    .footer-link {
+        display: inline-block;
+        margin: 0 15px;
+    }
+
+    /* Style for the "Jump to" links on tablets */
+    a[href="#section-1"],
+    a[href="#section-2"],
+    a[href="#section-3"],
+    a[href="#section-4"] {
+        font-size: 16px; /* Adjust text size for tablets */
+    }
+}
+
+/* Desktops and larger screens */
+@media (min-width: 1025px) {
+    .container {
+        width: 80%;
+    }
+
+    .gif-image1, .gif-image {
+        max-width: 400px;
+    }
+
+    .skills {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .skills .skill-row {
+        width: 45%;
+    }
+    .skill-row1 img {
+    
+        height: auto; /* Keep the aspect ratio of the image */
+        width: 45%;
+    }
+    .footer-link {
+        display: inline-block;
+        margin: 0 20px;
+    }
+
+    .image-link {
+        max-width: 50px; /* Adjust the size as needed */
+        height: auto; /* Maintain the aspect ratio */
+    }
+
+    .contact-me ol {
+        list-style-type: decimal;
+        padding-left: 20px;
+        font-size: 16px;
+    }
+
+    .contact-me ol li {
+        margin-bottom: 10px;
+        font-weight: normal;
+    }
+
+    .contact-me ol li a {
+        color: blue;
+    }
+
+    .contact-me ol li a:hover {
+        text-decoration: underline;
+    }
+
+    .contact-me ol li span {
+        font-weight: bold;
+    }
+
+    .email-icon {
+        width: 20px; /* Fixed width as per previous request */
+        height: 20px; /* Fixed height */
+        vertical-align: middle; /* Align the icon with text */
+        margin-right: 5px; /* Space between the icon and text */
+    }
+    .skills, .contact-me {
+        background: rgba(255, 255, 255, 0.8); /* Light background with transparency */
+        padding: 40px;
+        border-radius: 10px;
+        margin: 20px 0;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Slight shadow */
+    }
+    h2 {
+        color: #4e73df; /* Blue color for titles */
+    }
+    
+    /* "Jump to" links background */
+    a[href="#section-1"],
+    a[href="#section-2"],
+    a[href="#section-3"],
+    a[href="#section-4"] {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 2px solid #007bff; /* Blue border */
+        border-radius: 5px;
+        background-color: #f0f8ff;
+        color: #007bff;
+        font-weight: bold;
+        text-align: center;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        margin: 5px 0;
+    }
+    
+    /* Hover effect for "Jump to" links */
+    a[href="#section-1"]:hover,
+    a[href="#section-2"]:hover,
+    a[href="#section-3"]:hover,
+    a[href="#section-4"]:hover {
+        background-color: #007bff;
+        color: white;
+        transform: scale(1.05);
+    }
+}
